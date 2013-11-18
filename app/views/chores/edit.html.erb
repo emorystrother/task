@@ -1,0 +1,57 @@
+<h1>Editing Chore #<%= @chore.id %></h1>
+
+<%= form_tag(chore_url(@chore), method: 'patch') do %>
+  <div>
+    <%= label_tag :task_haver_id %><br />
+    <%= number_field_tag :task_haver_id, @chore.task_haver_id %>
+  </div>
+
+  <div>
+    <%= label_tag :student_id %><br />
+    <%= number_field_tag :student_id, @chore.student_id %>
+  </div>
+
+  <div>
+    <%= label_tag :type_of_chore %><br />
+    <%= text_field_tag :type_of_chore, @chore.type_of_chore %>
+  </div>
+
+  <div>
+    <%= label_tag :description_of_chore %><br />
+    <%= text_field_tag :description_of_chore, @chore.description_of_chore %>
+  </div>
+
+  <div>
+    <%= label_tag :review_of_student %><br />
+    <%= text_field_tag :review_of_student, @chore.review_of_student %>
+  </div>
+
+  <div>
+    <%= label_tag :review_of_task_haver %><br />
+    <%= text_field_tag :review_of_task_haver, @chore.review_of_task_haver %>
+  </div>
+
+  <div>
+    <%= label_tag :ask_price %><br />
+    <%= text_field_tag :ask_price, @chore.ask_price %>
+  </div>
+
+  <div>
+    <%= label_tag :price %><br />
+    <%= text_field_tag :price, @chore.price %>
+  </div>
+
+  <div>
+    <%= label_tag :complete_by %><br />
+    <%= text_field_tag :complete_by, @chore.complete_by %>
+  </div>
+
+  <div>
+    <%= label_tag :active %><br />
+    <%= check_box_tag :active, 1, @chore.active? %>
+  </div>
+
+  <div>
+    <%= submit_tag "Update Chore" %>
+  </div>
+<% end %>
